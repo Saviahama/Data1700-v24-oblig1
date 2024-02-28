@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<h1>Bestilling av kinobilletter</h1>
+
+
+<table>
+    <label for="film">Velg film: </label>
+    <select id="film" onchange="select()">
+        <option value=""disabled selected> Velg film her </option>
+        <option value="Avatar">Avatar</option>
+        <option value="Ant Man">Ant Man</option>
+        <option value="Titanic">Titanic</option>
+    </select>
+
+    <div>
+        <div>
+            <tr>
+                <td>Antall</td>
+                <td><input type="number" id="antall" class="short-input"/></td>
+                <td><label class="error" for="antall" id="error.antall"></label></td>
+            </tr>
+        </div>
+
+        <div>
+            <tr>
+                <td>Fornavn</td>
+                <td><input type="text" id="fornavn"/></td>
+                <td><label class="error" for="fornavn" id="error.fornavn"></label></td>
+            </tr>
+        </div>
+
+        <div>
+            <tr>
+                <td>Etternavn</td>
+                <td><input type="text" id="etternavn"/></td>
+                <td><label class="error" for="etternavn" id="error.etternavn"></label></td>
+            </tr>
+        </div>
+
+
+
+        <div>
+            <tr><td>Telefonnr</td>
+                <td><input type="tel" id="telefonnr"/></td>
+                <td><label class="error" for="telefonnr" id="error.telefonnr"></label></td>
+
+            </tr>
+        </div>
+
+        <div>
+            <tr><td>Epost</td>
+                <td><input type="text" id="epost"/></td>
+                <td><label class="error" for="epost" id="error.epost"></label></td>
+            </tr>
+        </div>
+
+        <tr><td><button onclick="kjopBillett()">Kjøp billett</button></td>
+        </tr>
+
+    </div>
+
+</table>
+
+<div>
+    <h2>Alle billetter</h2>
+</div>
+
+<div id="kino"></div>
+
+<br>
+<button onclick="slettBillett()">Slett alle billettene</button>
+
+<div id="slettBillett"></div>
+
+
+</body>
+</html>
